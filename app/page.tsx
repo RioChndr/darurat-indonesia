@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   authors: [
-    { name: "Rio Chandra", url: "https://x.com/rio_chndr/" },
+    { name: "Rio Chandra", url: "https://x.com/me_riochndr/" },
     { name: "Muhammad Fauzan", url: "https://www.facebook.com/fzn0x" },
   ],
   keywords: ["Indonesia", "darurat", "kawalkeputusanMK", "demokrasi dihabisi"],
