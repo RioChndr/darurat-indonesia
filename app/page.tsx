@@ -1,113 +1,246 @@
 import Image from "next/image";
+import { VideoExplenation } from "./components/video-explanation";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  authors: [
+    { name: "Rio Chandra", url: "https://x.com/rio_chndr/" },
+    { name: "Muhammad Fauzan", url: "https://www.facebook.com/fzn0x" },
+  ],
+  keywords: ["Indonesia", "darurat", "kawalkeputusanMK", "demokrasi dihabisi"],
+  title: "Darurat Indonesia | #KawalKeputusanMK",
+};
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+    <main className="relative text-white font-mono min-h-screen">
+      <Image
+        src="/peringatan-darurat-indonesia.png"
+        alt="Peringatan darurat indonesia"
+        className="fixed inset-0 object-cover z-0 w-full h-screen"
+        width={1024}
+        height={1024}
+      >
+      </Image>
+      <section className="hero relative z-10 container pt-20 w-full min-h-screen flex items-center">
+        <div className="w-full">
+          <div className="flex justify-between w-full ">
+            <div className="flex flex-col gap-3 ">
+              <h1 className="text-4xl">Darurat indonesia</h1>
+
+              <p>
+                tldr; MK membuat keputusan baru mengenai syarat pelaksanaan
+                pilkada, kemudian DPR dengan buru-buru mengubah peraturan!.
+              </p>
+              <p>
+                Dapatkan pemahaman mengenai latar biru dan garuda yang
+                dijelaskan dengan lengkap oleh Mata Najwa
+              </p>
+              <div>
+                <div className="underline">#kawalkeputusanMK</div>
+                <div className="underline">#DemokrasiDihabisi</div>
+              </div>
+            </div>
+            <VideoExplenation />
+          </div>
+          <div>
+            <p>
+              Bantu Sebarkan!
+            </p>
+            <div className="flex items-center gap-3 *:underline">
+              <a href="https://x.com">X (Twitter)</a>
+              <a href="https://facebook.com">Facebook</a>
+              <a href="https://instagram.com">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="relative z-10 container pt-20 flex flex-col gap-3 w-full">
+        <h2 className="text-3xl">
+          Gerakan &quot;Peringatan Darurat&quot; Sosial Media
+        </h2>
+        <p>
+          Social media ramai di penuhi dengan gambar &quot;Peringatan
+          Darurat&quot;, di x.com, instagram hingga tiktok. Semua kalangan
+          masyrakat ikut merasakan gerakan ini.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-3">
+          <Image
+            src="/screenshot-x.png"
+            alt="Screenshot x"
+            height={800}
+            width={800}
+            className="object-cover border-2 border-white"
           >
-            By{" "}
+          </Image>
+          <a
+            href="https://x.com/TrendAsia_Org/status/1826241657169436841"
+            target="_blank"
+          >
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+              src="/screenshot-social-media.jpg"
+              alt="Screenshot social media"
+              height={800}
+              width={800}
+              className="object-cover border-2 border-white"
+            >
+            </Image>
           </a>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+      </section>
+      <section className="relative z-10 container pt-20 flex flex-col gap-3 w-full">
+        <h2 className="text-3xl">
+          Aksi
+        </h2>
+        <div className="flex flex-col gap-3">
+          <p>
+            Aksi diluncurkan di berbagai daerah indoensia
           </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+          <p>
+            Oleh ismailfahmi, ia menggunakan <i>factminer</i>{" "}
+            untuk mencari di mana saja terjadinya demo aksi ini, mengejutkan ini
+            terjadi hampir seluruh daerah indonesia
           </p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+          <a href="https://x.com/ismailfahmi/status/1314016757242163200/photo/1">
+            <figure>
+              <Image
+                src="/sebaran-aksi-ind.jpg"
+                alt="Sebaran aksi dari @ismailfahmi"
+                width={800}
+                height={800}
+                objectFit="cover"
+                className="border-2 border-white"
+              >
+              </Image>
+              <figcaption className="text-center">
+                Sebaran aksi yang dikumpulkan oleh x.com/ismailfahmi
+              </figcaption>
+            </figure>
+          </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          <p>
+            Partai buruh membuat postingan di x.com untuk mengundang masyarakat
+            melakukan aksi unjuk rasa.
           </p>
-        </a>
-      </div>
+
+          <div className="grid grid-cols-2 gap-3">
+            <a href="https://twitter.com/EXCOPARTAIBURUH/status/1826151875403722795?ref_src=twsrc%5Etfw">
+              <Image
+                src="/screenshot-x-aksiburu.png"
+                alt="aksi buruh screenshot social media x"
+                width={800}
+                height={800}
+                objectFit="cover"
+              >
+              </Image>
+            </a>
+
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/DOOrIxw5xOw?si=nXqLdy7_lmWUPXX-&amp;controls=0"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="border-2 border-white"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <section>
+      </section>
+      <section className="diliput-oleh relative z-10 container pt-20 flex flex-col gap-3 w-full">
+        <h2 className="text-3xl">
+          Diliput Oleh
+        </h2>
+        <ul>
+          {[
+            { label: "Mata Najwa(X)", url: "https://x.com/MataNajwa/" },
+            { label: "Kompas", url: "https://kompas.com" },
+            { label: "Dan lainnya", url: "#" },
+          ].map((v, i) => (
+            <li className="pl-3 border-l border-l-white" key={i}>
+              <a href={v.url}>{v.label}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section className="update-terbaru relative z-10 container pt-20 flex flex-col gap-3 w-full">
+        <h2 className="text-3xl">
+          Update Terbaru
+        </h2>
+        <div className="flex flex-col gap-2">
+          <NewsItem
+            link="https://www.inews.id/news/nasional/breaking-news-dpr-batal-sahkan-ruu-pilkada-hari-ini"
+            label="Breaking News: DPR Batal Sahkan RUU Pilkada Hari Ini"
+            description="DPR batalkan pengesahan RUU Pilkada hari ini. Anggota yang hadir tidak quorum."
+            publishDate="2024-08-22T10:12:00+07:00"
+          />
+          <NewsItem
+            link="https://nasional.kompas.com/read/2024/08/22/16221881/kpu-tegaskan-ikut-putusan-mk-soal-uu-pilkada"
+            label="KPU Tegaskan Ikut putusan MK soal UU pilkada"
+            description="DPR batalkan pengesahan RUU Pilkada hari ini. Anggota yang hadir tidak quorum."
+            publishDate="2024-08-22T09:22:18+00:00"
+          />
+        </div>
+        <hr />
+        <p className="italic">
+          Akan di update secara berkala
+        </p>
+      </section>
+
+      <section className="diliput-oleh relative z-10 container pt-20 flex flex-col gap-3 w-full">
+        <h2 className="text-3xl">
+          Sumber
+        </h2>
+        <p>
+          Seluruh gambar dan teks pada website ini sudah dilengkapi link untuk
+          diklik langsung
+        </p>
+      </section>
+
+      <footer className="relative z-10 pt-20 p-12 flex flex-col gap-3 w-full min-h-32">
+        <hr />
+        <div>
+          Peringatan darurat Indonesia
+          <div>
+            <div className="underline">#kawalkeputusanMK</div>
+            <div className="underline">#Demokrasi Dihabisi</div>
+          </div>
+        </div>
+      </footer>
     </main>
+  );
+}
+
+function NewsItem(props: {
+  link: string;
+  label: string;
+  publishDate?: string;
+  description?: string;
+  children?: string;
+}) {
+  return (
+    <div className="border-l border-l-white pl-3 group">
+      <a
+        className="font-bold text-xl group-hover:underline"
+        href={props.link}
+        aria-label={props.label}
+      >
+        {props.label}
+      </a>
+      {props.description && <p>{props.description}</p>}
+      <time
+        dateTime={props.publishDate}
+        className="text-sm italic"
+      >
+        {new Date(props.publishDate ?? "").toLocaleString()}
+      </time>
+    </div>
   );
 }
