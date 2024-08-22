@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   ],
   keywords: ["Indonesia", "darurat", "kawalkeputusanMK", "demokrasi dihabisi"],
   title: "Darurat Indonesia | #KawalKeputusanMK",
+  description: "Rangkuman matinya demokrasi Indonesia #DaruratIndonesia",
 };
 
 export default function Home() {
